@@ -72,7 +72,7 @@ public static class CB
 			case VCVersion.v141:
 				return "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\VC\\Auxiliary\\Build\\vcvarsall.bat";
 			case VCVersion.v142:
-				return "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Enterprise\\VC\\Auxiliary\\Build\\vcvarsall.bat";
+				return "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Professional\\VC\\Auxiliary\\Build\\vcvarsall.bat";
             default:
                 throw new NotImplementedException();
         }
@@ -1254,6 +1254,7 @@ public static class CB
         defines["SQLITE_ENABLE_RTREE"] = null;
         defines["SQLITE_ENABLE_SNAPSHOT"] = null;
         defines["SQLITE_DEFAULT_FOREIGN_KEYS"] = "1";
+        defines["SQLITE_MAX_ATTACHED"] = "100";
     }
 
     static void add_win_sqlite3_defines(Dictionary<string,string> defines)
